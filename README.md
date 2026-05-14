@@ -4,11 +4,6 @@
 
 ---
 
-## 🔗 Live Application
-**Check out the live website here:** [ElevateIQ Live Demo](https://ais-pre-zknaw3qkgn4w2s3olsynjn-221152184265.asia-southeast1.run.app)
-
----
-
 ## 🚀 The "Zero-Bias" Auditor Approach
 ElevateIQ is an innovative tool designed for the modern job seeker. It bridges the gap between graduation and employment by providing an **objective, AI-powered audit** of interview readiness in under 2 minutes.
 

@@ -2,8 +2,6 @@
 
 **“Know if you’re truly interview-ready.”**
 
-[![Live Demo](https://ais-pre-zknaw3qkgn4w2s3olsynjn-221152184265.asia-southeast1.run.app)] (the app is live here) just copy paste the link in the browser
-
 ---
 
 ## 🔗 Live Application

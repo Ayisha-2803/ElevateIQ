@@ -2,6 +2,14 @@
 
 **“Know if you’re truly interview-ready.”**
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://ais-pre-zknaw3qkgn4w2s3olsynjn-221152184265.asia-southeast1.run.app)
+[![Tech Stack](https://img.shields.io/badge/Tech-React%20%7C%20Tailwind%20%7C%20Gemini-blue?style=for-the-badge)](https://ais-pre-zknaw3qkgn4w2s3olsynjn-221152184265.asia-southeast1.run.app)
+
+---
+
+## 🔗 Live Application
+**Check out the live website here:** [ElevateIQ Live Demo](https://ais-pre-zknaw3qkgn4w2s3olsynjn-221152184265.asia-southeast1.run.app)
+
 ---
 
 ## 🚀 The "Zero-Bias" Auditor Approach
@@ -55,5 +63,5 @@ To run this project locally, follow these steps:
 
 ---
 
-## 📽️ Demo Recording
+Built with ❤️ for the **UnsaidTalks Hackathon** | 2026
 

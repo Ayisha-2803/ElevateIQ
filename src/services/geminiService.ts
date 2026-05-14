@@ -1,6 +1,17 @@
 import { GoogleGenAI, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+let genAI: GoogleGenAI | null = null;
+
+const getGenAI = () => {
+  if (!genAI) {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      throw new Error("GEMINI_API_KEY is not defined. Please set it in your environment variables on Vercel.");
+    }
+    genAI = new GoogleGenAI(apiKey);
+  }
+  return genAI;
+};
 
 export interface AssessmentResult {
   overallScore: number;
@@ -26,6 +37,7 @@ export const analyzeReadiness = async (
   portfolioUrl: string,
   answers: { question: string; answer: string }[]
 ): Promise<AssessmentResult> => {
+  const ai = getGenAI();
   const prompt = `
     Analyze the following candidate data for the role of ${role}.
     
@@ -38,10 +50,13 @@ export const analyzeReadiness = async (
     Be objective and critical as a recruiter from a top tech company.
   `;
 
-  const response = await ai.models.generateContent({
-    model: "gemini-3-flash-preview",
-    contents: prompt,
-    config: {
+  const model = ai.getGenerativeModel({
+    model: "gemini-1.5-flash",
+  });
+
+  const result = await model.generateContent({
+    contents: [{ role: "user", parts: [{ text: prompt }] }],
+    generationConfig: {
       responseMimeType: "application/json",
       responseSchema: {
         type: Type.OBJECT,
@@ -79,10 +94,11 @@ export const analyzeReadiness = async (
     },
   });
 
-  return JSON.parse(response.text);
+  return JSON.parse(result.response.text());
 };
 
 export const generateQuestions = async (role: string, level: string = "Junior") => {
+  const ai = getGenAI();
   const prompt = `Generate exactly 5 interview questions for the role of ${role} at ${level} level. 
   MANDATORY STRUCTURE:
   - 3 questions must be 'SUBJECTIVE' (open-ended technical or situational).
@@ -91,10 +107,13 @@ export const generateQuestions = async (role: string, level: string = "Junior") 
   Keep them challenging. Subjective questions should be answerable in 1-2 sentences.
   Each question should target a different skill (e.g. logic, framework, system design, soft skills, portfolio).`;
 
-  const response = await ai.models.generateContent({
-    model: "gemini-3-flash-preview",
-    contents: prompt,
-    config: {
+  const model = ai.getGenerativeModel({
+    model: "gemini-1.5-flash",
+  });
+
+  const result = await model.generateContent({
+    contents: [{ role: "user", parts: [{ text: prompt }] }],
+    generationConfig: {
       responseMimeType: "application/json",
       responseSchema: {
         type: Type.ARRAY,
@@ -117,5 +136,5 @@ export const generateQuestions = async (role: string, level: string = "Junior") 
     },
   });
 
-  return JSON.parse(response.text);
+  return JSON.parse(result.response.text());
 };

@@ -1,0 +1,13 @@
+{
+  "name": "ElevateIQ: Instant Interview Auditor",
+  "description": "Know if you're truly interview-ready. An AI-powered auditor providing a 0-100 score, deep analysis, and a personalized roadmap in under 2 minutes.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "AI-powered resume & portfolio analysis",
+    "Adaptive technical assessment",
+    "Personalized improvement roadmap"
+  ]
+}

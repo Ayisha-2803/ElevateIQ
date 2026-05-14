@@ -33,6 +33,8 @@ Most assessment tools are either simple MCQs or long, tedious mocks. ElevateAI u
 -   **7-Day Growth Roadmap**: Personalized immediate actions to improve hireability.
 -   **Speed-First UX**: Completed in < 120 seconds, respecting the candidate's time.
 
+live DEMO of the webdashboard https://drive.google.com/file/d/14QuMJsq52o1R8BsaWoJ72Pa2Z1uSRkie/view?usp=drive_link
+
 
 Built with ❤️ for the **UnsaidTalks Hackathon** | 2026
 

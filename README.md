@@ -33,32 +33,6 @@ Most assessment tools are either simple MCQs or long, tedious mocks. ElevateAI u
 -   **7-Day Growth Roadmap**: Personalized immediate actions to improve hireability.
 -   **Speed-First UX**: Completed in < 120 seconds, respecting the candidate's time.
 
-## 💻 Local Development
-
-To run this project locally, follow these steps:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Ayisha-2803/ElevateIQ.git
-   cd ElevateIQ
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
-
----
 
 Built with ❤️ for the **UnsaidTalks Hackathon** | 2026
 
